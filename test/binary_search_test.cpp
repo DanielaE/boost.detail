@@ -233,6 +233,7 @@ void test_loop(Sequence& x, Compare cmp, unsigned long test_count)
         assert(range.second == u);
 
         bool found = searches<Compare>::binary_search(start, finish, key, cmp);
+		(void)found;
         assert(found == (u != l));
         std::cout << "found " << count << " copies of " << key << " at index " << index << "\n";
     }
