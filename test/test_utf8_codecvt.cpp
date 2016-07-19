@@ -18,6 +18,10 @@
 #include <cwchar>
 #include <boost/config.hpp>
 
+#if defined(BOOST_MSVC)
+# pragma warning(disable: 4310) // cast truncates constant value
+#endif
+
 #define BOOST_UTF8_BEGIN_NAMESPACE namespace boost { namespace detail {
 #define BOOST_UTF8_END_NAMESPACE } }
 #include <boost/detail/utf8_codecvt_facet.hpp>
