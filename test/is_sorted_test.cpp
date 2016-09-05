@@ -12,7 +12,7 @@
 #include <boost/detail/lightweight_test.hpp>
 
 template<class T>
-struct tracking_less: std::binary_function <T, T, bool> {
+struct tracking_less {
   typedef bool result_type;
 
   #if defined(__PATHSCALE__)
@@ -27,7 +27,7 @@ struct tracking_less: std::binary_function <T, T, bool> {
 };
 
 template<class T>
-struct tracking_less_equal: std::binary_function <T, T, bool> {
+struct tracking_less_equal {
   typedef bool result_type;
 
   #if defined(__PATHSCALE__)
@@ -42,7 +42,7 @@ struct tracking_less_equal: std::binary_function <T, T, bool> {
 };
 
 template<class T>
-struct tracking_greater: std::binary_function <T, T, bool> {
+struct tracking_greater {
   typedef bool result_type;
 
   #if defined(__PATHSCALE__)
@@ -57,7 +57,7 @@ struct tracking_greater: std::binary_function <T, T, bool> {
 };
 
 template<class T>
-struct tracking_greater_equal: std::binary_function <T, T, bool> {
+struct tracking_greater_equal {
   typedef bool result_type;
 
   #if defined(__PATHSCALE__)
